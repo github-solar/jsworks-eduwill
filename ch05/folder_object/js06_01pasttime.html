@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자스06일이론01:날짜계산 프로그램</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+        
+        #container {
+            /* display: block; */
+            margin: 50px auto;
+            text-align: center;
+            width: 280px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: rgba(208, 251, 202, 0.418);
+        }
+
+        #reslt {
+            color: #ee0000;
+        }
+
+        h1{
+            padding: 50px 0 0 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <h1>책 읽기</h1>
+        <p><span id="reslt"></span>일 연속으로 책 읽기를 달성했군요.</p>
+        <p>축하합니다.</p>
+    </div>
+
+    <script>
+        // 현재날짜 - 독서를 시작한 날짜("2021-5-27") = 지나온 날짜 
+        var today = new Date();
+        var firstday = new Date("2021-5-27");
+
+        var pastTime = today.getTime() - firstday.getTime();
+        pastTime = Math.round(pastTime / (24 * 60 * 60 * 1000));
+        // 1970.1.1. 자정 이후부터의 시간값(ms)이다.  
+        document.getElementById("reslt").innerHTML = pastTime;
+    </script>
+
+
+</body>
+
+</html>

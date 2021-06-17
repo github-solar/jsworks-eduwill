@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자스07일이론13:사용자 객체의 정의와 사용02</title>
+</head>
+
+<body>
+    <script>
+        var book = {
+            title: "점프 투 파이썬",
+            author: "박응용",
+            pages: 500,
+            price: 20000,
+
+            info: function () {
+                alert(this.title + " 책의 분량은 " + this.pages + "쪽 입니다.");
+            }
+            // 이것은 객체 내부에서 정보를 추출할 때 구문 형식이다. 
+        }
+
+        book.info();
+        document.write("책의 저자는 " + book.author + "입니다.");
+        // 이것은 객체 외부에서 정보를 추출할 때의 구문 형식이다. 
+    </script>
+</body>
+
+</html>

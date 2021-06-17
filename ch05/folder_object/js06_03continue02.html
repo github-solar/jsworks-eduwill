@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자스06일이론03:continue02짝수끼리 더하기</title>
+</head>
+
+<body>
+    <h1>짝수끼리 더하기</h1>
+    <script>
+        var j = prompt("숫자를 입력하세요", "1");
+        var sum = 0;
+        // 누적값을 구할 때는 누적값 변수를 반복문이나 조건문 바깥에서 선언해야 한다. 
+        for (var i = 1; i <= j; i++) {
+            if (i % 2 === 1) {
+                continue;
+            } else if (i % 2 === 0) {
+                sum = sum + i;
+                // 또는 sum +=i; 로 누적명령 선언해줘도 된다. 
+            }
+        }
+        document.write("2의 배수의 합 : " + sum);
+        // 다만 이 예제에서는 continue 구문을 빼도 결과값은 옳게 나온다. 
+    </script>
+
+</body>
+
+</html>

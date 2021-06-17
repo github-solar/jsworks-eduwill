@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자스06일이론02:반복문조건continue01</title>
+</head>
+
+<body>
+    <h1>continue예제01</h1>
+    <script>
+        // 예컨대 1부터10까지 자연수 출력중 특정 조건만 거르고 출력하려 할 때
+        // 아래 예제는 5만 빼고 출력
+        for (var i = 1; i <= 10; i++) {
+            if (i === 5) {
+                continue;
+                // continue는 break 조건과 대비해서 기능, 역할을 기억해야 한다. 
+            }
+            document.write(i + "<br>");
+        }
+    </script>
+
+    <h1>continue예제02</h1>
+    <script>
+        // 1부터30까지 자연수 출력중 3의 배수만 출력
+        // continue를 써서
+        for (var i = 1; i <= 30; i++) {
+            if (i % 3 !== 0) {
+                continue;
+            }
+            document.write(i + "<br>");
+        }
+    </script>
+</body>
+</html>

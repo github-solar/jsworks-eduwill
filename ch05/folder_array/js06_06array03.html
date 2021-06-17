@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자스06일이론06:배열03</title>
+</head>
+
+<body>
+    <h2>Array 객체를 사용한 배열</h2>
+    <script>
+        // num 이라는 빈 배열을 생성
+        var num = new Array();
+        document.write("1. 배열의 길이 : " + num.length + "개<br>");
+// 객체가 되면 변수.연산자 형식으로 접근한다. 
+        num[0] = 95;
+        num[1] = 74;
+        num[2] = 82;
+        num[3] = 93;
+        document.write("2. " + num + "<br>");
+        // 이렇게 해도 배열변수 전체 목록이 출력된다. 
+        // 다만 위에 new Array();로 num이 배열변수임을 선언했기 때문인 것 같다. 
+
+        document.write("3. 배열의 길이 : " + num.length + "개<br>");
+
+        // for문으로 전체조회하기. 이것은 반드시 해야 한다.
+        for (i = 0; i < num.length; i++) {
+            document.write(num[i] + " ");
+        }
+        document.write("<br>");
+        // 배열의 연산1
+
+        document.write("5. num[0] + num[1] = " + (num[0] + num[1]) + "<br>");
+
+        // 배열의 전체 연산
+        var sum = 0;
+        for (var i = 0; i < num.length; i++) {
+            sum += num[i];
+            // 또는 sum = sum + num[i]; 로 선언해줘도 누적값이 계산될 것이다.
+            // var i = 0 을 반복문 바깥에서 선언해도 된다.  
+        }
+        document.write("6. 배열의 합계 : " + sum);
+        document.write("<br>");
+
+        // 평균
+        document.write("7. 배열의 평균 : " + (sum / num.length));
+    </script>
+</body>
+
+</html>

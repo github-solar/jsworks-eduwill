@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_01객체의 배열화</title>
+    <style>
+        h1{padding: 20px;}
+        p{width: 250px; height: 50px; border: 1px solid #ccc; line-height: 50px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>책 제목으로 살펴보기</h1> -->
+    <script>
+        function Book(title, author, price) {
+            this.title = title;
+            this.author = author;
+            this.price = price;
+        }
+        // Book 객체의 인스턴스 만들기
+        var html = new Book("웹 표준의 정석", "고경희", 30000);
+        // document.write(html.title); // 제대로 출력되는 것 확인. 주석처리
+
+        var python = new Book("점프 투 파이썬", "박응용", 20000);
+        var django = new Book("점프 투 장고", "박응용", 20000);
+
+        // 현재 객체가 3개 만들어졌는데 이것을 배열 요소로 만들 수 있다. 
+        var bookList = ["html", "python", "django"]; //객체를 배열요소로 넣을 때 문자로 생각하고 따옴표로 넣으면 에러 뜬다.
+        var bookList = [html, python, django]; // 객체가 변수화 되었으면 따옴표를 붙이면 안된다. 문자가 아니다.
+
+        // 목록조회
+        document.write(bookList.length); // 정상이라면 3이 출력된다.
+        document.write("<br>");
+        document.write("책 제목으로 살펴보기");
+        document.write("<br>");
+
+        for (var i = 0; i < bookList.length; i++) {
+            //document.write(bookList[i].title + " "); //이것은 출력이 안된다.
+            document.write("<p>" + bookList[i].title + "</p>" + "<br>"); //이것은 출력이 안된다.
+        }
+    </script>
+</body>
+
+</html>

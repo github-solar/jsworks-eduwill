@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자스07일이론06:let 키워드 사용</title>
+</head>
+
+<body>
+    <h2>1. var 사용하기</h2>
+    <script>
+        var x = 1;
+        if (x === 1) {
+            x = x + 1;
+            console.log(x); // 변수 x 는 2
+        }
+        console.log(x); // 변수 x 는 2
+
+        var x = 0; // 위에서 쓴 변수 x를 다시 선언했다. 
+        // x = " "; <-이렇게 선언하면 변수 x가 완전히 비워진다. 위에는 0 값이 저장된다.
+        console.log(x);
+        // 여기서 문제가 변수 x 가 동일하게 계속 쓰여서 협업시 착오가 생길 수 있다. 
+        // var 로 선언하면 동일한 변수를 재사용 할 수 있다.
+        // 자바스크립트 언어의 특이한 문법이다. 
+    </script>
+
+    <h2>2. let 사용하기</h2>
+    <script>
+        let x = 1;
+
+        if (x === 1) {
+            x = x + 1;
+            console.log(x);
+        }
+
+        let x = 0;
+        console.log(x);
+        // let 키워드를 써서 변수를 선언하면 재사용이 안된다. 에러가 뜬다. 
+        // let x 를 다시 선언하면 에러가 뜬다. 그렇다면 변수를 비우는 방법은?
+    </script>
+
+</body>
+
+</html>

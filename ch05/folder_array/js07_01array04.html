@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자스07일이론01:배열04</title>
+</head>
+
+<body>
+    <h2>Array 객체를 사용한 배열02</h2>
+    <script>
+        var array = new Array("딸기", "바나나", "사과", "배", 2.54, 300);
+        // 자바스크립트의 배열 요소는 특이하게 자료형이 달라도 함께 묶을 수 있다. 
+        // 다른 언어에서는 이형의 자료형을 동일한 배열에 함께 묶을 수 없다고 한다.  
+        
+        // 전체 출력. 
+        for (var i = 0; i < array.length; i++) {
+            document.write(array[i] + " ");
+        }
+        document.write("<br>");
+
+        // 객체의 일부요소 변경
+        array[4] = "포도";
+        array[5] = "감귤";
+        // array 라는 객체 자체를 출력하려면
+        document.write(array);
+    </script>
+</body>
+
+</html>

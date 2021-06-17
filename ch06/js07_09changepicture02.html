@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이론09:이벤트처리03</title>
+</head>
+
+<body>
+    <div id="container">
+        <img src="images/cup-1.png" alt="" id="cup">
+    </div>
+    <script>
+        // 자바스크립트  객체의 onclick 속성을 활용
+        var cup = document.querySelector("#cup");
+        cup.onclick = function () {
+            cup.src = "images/cup-2.png";
+        }
+
+        // cup.onclick = changePic; 위는 사용자 정의 함수 형식으로 이벤트 처리
+        //여긴 괄호가 없음을 주의.
+
+        function changePic() {
+            cup.src = "images/cup-2.png";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자스07일이론12:사용자 객체의 정의와 사용</title>
+</head>
+
+<body>
+    <script>
+        var person = {
+            name: '추신수',
+            age: 39,
+            // 배열과 객체 구문 형식의 차이점은?
+
+            play : function() {
+                alert("홈런을 친다!!");
+            }
+        }
+
+        document.write(person.name + "<br>");
+        document.write(person.age + "<br>");
+        person.play();
+    </script>
+</body>
+</html>
